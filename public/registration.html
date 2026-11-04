@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+    <h1>Create Account</h1>
+
+    <form id="registerForm">
+        <input type="text" id="name"
+               placeholder="Full Name" required>
+
+        <input type="email" id="email"
+               placeholder="Email" required>
+
+        <input type="password" id="password"
+               placeholder="Password" minlength="8" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="message"></p>
+
+    <p>Already registered?
+        <a href="login.html">Login here</a>
+    </p>
+</div>
+
+<script>
+document.getElementById("registerForm").onsubmit =
+async function(event) {
+
+    event.preventDefault();
+
+    const response = await fetch("/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value
+        })
+    });
+
+    const message = await response.text();
+
+    document.getElementById("message").textContent = message;
+
+    if (message === "Registration successful") {
+        window.location.href = "login.html";
+    }
+};
+</script>
+
+</body>
+</html>

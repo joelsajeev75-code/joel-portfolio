@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joel Sajeev Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header class="navbar">
+    <h1 class="logo">JOEL<span>.</span></h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academic">Academic</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Welcome to my Portfolio</h1>
+    <h2>Joel Sajeev</h2>
+    <p>BSc Computer Science and Mathematics Student</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Joel Sajeev, a student at Kristu Jayanti University.</p>
+    <p>I am interested in computer science, mathematics and technology.</p>
+</section>
+
+<section id="academic">
+    <h2>Academic Details</h2>
+
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Institution</th>
+            <th>Year</th>
+        </tr>
+
+        <tr>
+            <td>Class 10</td>
+            <td>VMPS</td>
+            <td>2022</td>
+        </tr>
+
+        <tr>
+            <td>Class 12</td>
+            <td>St. Sebastian's</td>
+            <td>2024</td>
+        </tr>
+
+        
+    </table>
+    <hr>
+    BSc Computer Science and Mathematics	Kristu Jayanti University	Present
+</section>
+
+<section id="skills">
+    <h2>Skills and Knowledge</h2>
+    <p>Communication</p>
+    <p>Computer Skills</p>
+    <p>Problem Solving</p>
+    <p>German Language</p>
+</section>
+
+<section id="achievements">
+    <h2>Personal Achievements</h2>
+    <p>Generative AI Certificate</p>
+    <p>Basics of Python</p>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>Football</p>
+    <p>Badminton</p>
+    <p>Reading</p>
+    <p>Sleeping</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: joelsajeev75@gmail.com</p>
+    <p>Phone: +91-9562970230</p>
+</section>
+
+<section id="manager">
+    <h2>Portfolio Manager</h2>
+
+    <form id="itemForm">
+        <input type="text" id="title"
+               placeholder="Title" required>
+
+        <input type="text" id="category"
+               placeholder="Category" required>
+
+        <textarea id="description"
+                  placeholder="Description" required></textarea>
+
+        <button type="submit">Add Details</button>
+    </form>
+
+    <div id="items"></div>
+</section>
+
+<footer>
+    <p>© 2026 Joel Sajeev</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
